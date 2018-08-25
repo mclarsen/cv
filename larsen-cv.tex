@@ -1,0 +1,169 @@
+\documentclass[margin,line]{res}
+
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+% if using pdflatex:
+%\setlength{\pdfpagewidth}{\paperwidth}
+%\setlength{\pdfpageheight}{\paperheight} 
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+
+\begin{document}
+
+\name{Matthew C. Larsen \vspace*{.1in}}
+
+\begin{resume}
+\section{\sc Contact Information}
+\vspace{.05in}
+\begin{tabular}{@{}p{2in}p{4in}}
+205 Deschutes Hall     & {\it Voice:}  (530) 902-1033 \\            
+University of Oregon   &  {\it E-mail:}  mlarsen@cs.uoregon.edu\\         
+1477 East 13th         &  {\it WWW:} www.mclarsen.com\\       
+Eugene, OR 97403       &  \\     
+\end{tabular}
+
+\section{\sc Objective}
+To pursue interesting projects in my research areas, to develop as a Ph.D. researcher, and ultimately to acquire a job in industry, a laboratory, or academia.
+\section{\sc Research Interests}
+Computer Graphics, Scientific Visualization, GPU and Many-core Programming
+
+\section{\sc Education}
+\textbf{Ph.D. Student and Graduate Research Fellow} - University of Oregon - Advisor: Hank Childs
+\\
+\textbf{B.S. Computer Science} - CSU Sacramento - Magna Cum Laude - CSU Sacramento - GPA 3.823 %- December 2012
+\\
+Computer Information Science, Sacramento City College
+
+\section{\sc Work Experience}
+
+\begin{tabular}{lll}
+\textbf{Intern Researcher}	& Lawrence Livermore National Laboratory & 6/15-Pres \\
+\textbf{Intern Researcher}	& Oak Ridge National Laboratory & 6/14-9/14 \\
+\textbf{Graduate Research Fellow}	& University of Oregon  & 9/13-Pres \\
+\textbf{Developer}	& POS Portal, Sacramento, Ca.  & 2/13-9/13 \\
+\textbf{IT Consultant}	& Absolute Cellular, Davis, Ca. & 3/07- 2/13 \\
+\textbf{Field Network Engineer}	& High Density Networks & 2/05- 3/07
+\end{tabular}
+
+\section{\sc Computer Skills} 
+\begin{list2}
+	\item \textbf{Languages} :  C, C++, Java, C\#, GLSL ,Apex, RISC Assembly, JavaScript, HTML, XML
+	\item \textbf{Tools}:  NVIDIA Visual Profiler, Intel VTune, ISPC (Intel Vectorizing Compiler), Eclipse, GIT, make, cmake, MongoDB, SQL, MS Visual Studio 2012, Netbeans, gcc , ddt, Excel 
+	\item \textbf{APIs}: VTK, VTK-m, OpenGL, CUDA, EAVL, OpenMP, MPI, Salesforce
+\end{list2}
+
+\section{\sc Projects}
+{\em \textbf{Stawman In Situ Visualization Mini-app} }
+
+\vspace{-.4cm}
+As an intern with Lawrence Livermore National Laboratory, worked with members of the VisIt team to develop a visualization \textit{in situ} mini-app, called Strawan, using several technologies including Conduit, EAVL, and the IceT parallel image compositing library. The main projects goals were ease of use (i.e., low code footprint for integrations) and execution in distributed-memory parallel batch environments. Responsibilities included visualization and parallel rendering implementation. To demonstrate its capabilities, we integrated with three physics mini-apps (LULESH, Kripke, and Cloverleaf3D), and performed weak scaling studies up to 4096 cores and 128 GPUs. 
+
+{\em \textbf{Directed Research Project PhD Milestone } }
+
+\vspace{-.4cm}
+An iterative ray tracer implemented using the Extreme-scale Analysis and Visualization Library (EAVL). EAVL uses data-parallel primitive operators such as scan, map, and reduce in order to provide an abstraction over heterogeneous architectures. Data-parallel libraries like EAVL allow code to be written once, and then executed on any supported back-ends, such as CPU, GPU, and Xeon Phi architectures. Used performance analysis tools for various architectures to profile kernels and eliminate bottlenecks. Further, this project performed a detailed performance analysis against highly optimized, architectural specific ray tracers. Results show that we achieve good performance on a wide variety of platforms, and that data-parallel primitives are a good direction. Passed with distinction, and the ray tracer was integrated into EAVL.
+
+{\em \textbf{Path Tracer Final Project} }
+
+\vspace{-.4cm}
+Implemented an iterative Monte Carlo path tracer using the EAVL ray tracing infrastructure built for the directed research project. Features include area lights, environmental HDR lighting, importance sampling, and texture mapping. Created a sampling infrastructure for hemispheres and planes using low-discrepancy sequences (e.g., Halton, Hammersly, and Sobol). 
+
+{\em \textbf{Linear Bounding Volume Hierarchy (LBVH)} }
+
+\vspace{-.4cm}
+Built a LBVH using EAVL to support fast acceleration structure builds times by maximizing available parallelism. Fast build times enable the ray tracer to remain interactive on time varying data sets. Steps in the parallel algorithm include a radix sort, implicit tree construction, reductions to calculate bounding boxes, bottom-up tree traversal, and an export to a flat representation
+
+{\em \textbf{Unstructured Volume Renderer} }
+
+\vspace{-.4cm}
+A volume renderer for unstructured tetrahedral meshes using EAVL. Integrated into EAVL Lab, the renderer supports transfer functions and both front-to-back and back-to-front compositing.
+
+{\em \textbf{Real-Time Volume Renderer Final Project} }
+
+\vspace{-.4cm}
+OpenGL 4.0 volume renderer as part of CIS 510 Scientific Visualization at the University of Oregon. Features included separate RGB and alpha peg points for transfer functions, textures to store both volume data and transfer functions, and fully interactive camera controls. Awarded best project both from faculty voting and from peer voting. 
+
+{\em \textbf{TSYS Maintenance Integration} }
+
+\vspace{-.4cm}
+Finished development of part of a Salesforce managed package that allows ISOs to change a merchant configuration with TSYS through the P2 CRM. Project was a backend systems integration between Salesforce instances and TSYS servers. The system allows for closing and re-opening merchant accounts, adding/updating accepted card types, and adding/updating/deleting merchant address and corporate business information. Other values that can be added/updated/deleted are discount rates, pricing methods, transactions fees, authorization fees, and miscellaneous fees. Before launch of the integration for each ISO, a database synchronization was completed to ensure the data integrity between the ISO database and TSYS..
+
+{\em \textbf{OpenGL Particle System Demo} }
+
+\vspace{-.4cm}
+Particle system demo using OpenGL 3.3 simulating fireworks. Implementation included vertex, fragment, and geometry shaders.
+
+{\em \textbf{OpenGL Advanced Graphics Final Project} }
+
+\vspace{-.4cm}
+Solar system created using OpenGL 3.3. Features included shadow mapping using depth buffers written to textures, normal mapping, particle systems, perlin noise on surface colors and vertexes, billboarding, hierarchical objects, VBOs, and multiple texturing.
+
+{\em \textbf{Boarding Administration Tool} }
+
+\vspace{-.4cm}
+Created a front end HTML and JavaScript UI to access and display merchant boarding and maintenance transaction information stored in a MongoDB database. Dynamically generates MongoDB queries to filter results based on processor, date ranges, client, transaction type, merchant identification number, and transaction GUIDs. The tools main purpose is to help troubleshoot boarding related issues. The tool also generates boarding statistics over specified date ranges that include the number of applications submitted, failure, and success rates. Furthermore, the tool displays graphs to illustrate the top reasons for application rejections in addition to the users responsible for the errors.
+
+{\em \textbf{Clark Pacific Field Portal } }
+
+\vspace{-.4cm}
+Serving as project manager with six team members for the first semester of senior project which is developing a field web portal for Clark Pacific. The Field Portal is based in a Microsoft development environment using MS SQL 2008, Visual Studio 2012, and written using ASP .NET and C\#. 
+
+\section{\sc Publications}
+Larsen M., Meredith J., Navratil P., Childs H.: Ray Tracing Within a Data Parallel Framework. In \textit{Proceedings of the IEEE Pacific Visualization Symposium}, Hangzhou, China, April 2015.
+     
+Larsen M., Labasan S., Navratil P., Meredith J., Childs H.: Volume Rendering Via Data-Parallel Primitives. In \textit{Proceedings of the 15h Eurographics Symposium on Parallel Graphics and Visualization}, Cagliari, Italy, May 2015.
+
+Labasan S., Larsen M., Childs H.: Exploring Tradeoffs in Power and Performance for a Scientific Visualization Algorithm. In \textit{Proceedings of the 5th IEEE Symposium on Large Data Analysis and Visualization}, Chicago, Illinois, October 2015 (To appear).
+
+Moreland K., Larsen M., Childs H. : Visualization for Exascale: Portable Performance is Critical. In \textit{Proceedings of SuperComputing Frontiers Conference}. Singapore, 2015 (Submitted)
+
+Larsen M., Brugger E., Childs H., Eliot J., Griffin K., Harrison C. : Strawman---A Batch In Situ Visualization and Analysis Tool for Multi-Physics Simulation Codes. In \textit{Proceedings of the 1st Workshop on In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV)}, held in conjunction with SC15, Austin, Texas, November 2015 (Submitted).
+
+Childs H., Abram G., Brownlee C., Larsen M., Navratil P. : On Alternative Visualization Systems For In Situ Processing. In \textit{Proceedings of the 1st Workshop on In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV)}, held in conjunction with SC15, Austin, Texas, November 2015 (Submitted).
+
+Moreland K., Sewell C., Usher W., Lo L., Meredith J., Pugmire D., Kress J., Schroots H., Ma K., Childs H., Larsen M., Chen C., Maynard R., Geveci B. : VTK-m: Accelerating the Visualization Toolkit for Massively Threaded Architectures. In \textit{the IEEE Journal of  Computer Graphics and Applications. (In preparation)}
+
+\section{\sc Invited Talks}
+\begin{list2}
+	\item Larsen, M. (2014) \textbf{Ray Tracing Within a Data Parallel Framework}. Kitware, Inc. Clifton Park, NY. December 6th. 
+	\item Larsen, M. (2015) \textbf{Ray Tracing Within a Data Parallel Framework}. Texas Advanced Computing Center, Austin, TX. January 29th.
+\end{list2}
+
+\section{\sc Service}
+\begin{list2}
+	\item Reviewer, Eurographics Parallel Graphics and Visualization Symposium 2015 
+	\item Reviewer, IEEE Scientific Visualization Conference 2015
+	\item Reviewer, ISAV 2015: In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization 
+\end{list2}
+
+\section{\sc Accomplishments and Activities}
+\begin{list2}
+	\item J. Donald Hubbard Family Scholarship in Computer and Information Science, University of Oregon (2015)
+	\item Vice President of Finance, Graduate Student Association, University of Oregon (2014-2015)
+	\item Dean's Honor List (2011-2012)
+	\item ACM Programming Contest Regional Qualifier 
+	\item Self supported throughout my studies  
+\end{list2}
+
+\end{resume}
+\end{document}
+
+
+
+
