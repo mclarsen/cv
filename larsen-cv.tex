@@ -26,6 +26,7 @@
       \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
       \setlength{\leftmargin}{0.2in}}}{\end{list}}
 
+\pagenumbering{gobble}
 
 \begin{document}
 
@@ -37,10 +38,17 @@
 \begin{resume}
 \section{\sc Contact Information}
 \vspace{.05in}
+%\begin{tabular}{@{}p{2in}p{4in}}
+%7000 East Ave     & {\it Voice:}  (530) 902-1033 \\
+%Mail Stop L-38   &  {\it E-mail:}  larsen30@llnl.gov\\
+%Livermore, CA 94550         &  {\it WWW:} www.mclarsen.com\\
+%                                 &  \\
+%\end{tabular}
+
 \begin{tabular}{@{}p{2in}p{4in}}
-7000 East Ave     & {\it Voice:}  (530) 902-1033 \\
-Mail Stop L-38   &  {\it E-mail:}  larsen30@llnl.gov\\
-Livermore, CA 94550         &  {\it WWW:} www.mclarsen.com\\
+2617 College Ave     & {\it Voice:}  (530) 902-1033 \\
+Livermore, CA 94550   &  {\it E-mail:}  larsen.matt1@gmail.com\\
+                      &  {\it WWW:} www.mclarsen.com\\
                                  &  \\
 \end{tabular}
 
@@ -69,6 +77,8 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 
 \section{\sc Awards}
 \begin{itemize}
+	\item Best Paper Award: “Interactive In Situ Visualization and Analysis using Ascent and Jupyter”
+  At the Workshop on In Situ Enabling Extreme-Scale Analysis and Visualization (ISAV) 2019.
 	\item Best Paper Award: “A Flexible System for In Situ Triggers.” At the Workshop on In Situ
 	Infrastructures for Enabling Extreme-Scale Analysis and Visualization (ISAV) 2018.
 	\item Best Paper Finalist: “Performance Modeling of In Situ Rendering.” At the International Conference
@@ -106,8 +116,9 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 %	\item \bibentry{Li:2017:PIS:3144769.3144773}.
 %	\item \bibentry{Larsen:2015:SBS:2828612.2828625}.
 %\end{enumerate}
-\section{\sc Peer-Reviewed First Authored Publications}
+\section{\sc Peer-Reviewed First/Last Authored Publications}
 \begin{enumerate}
+	\item \bibentry{jits_complicated}.
 	\item \bibentry{Larsen:2018:FSS:3281464.3281468} (\textbf{Best Paper}).
 	\item \bibentry{Larsen:2017:ASI:3144769.3144778}.
 	\item \bibentry{7877102} (\textbf{Best Paper Finalist}).
@@ -121,6 +132,12 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 \end{enumerate}
 \section{\sc Other Peer-Reviewed Publications}
 \begin{enumerate}[resume]
+	\item \bibentry{10.1145/3426462.3426469}.
+	\item \bibentry{doi:10.1177/1094342020935991}.
+	\item \bibentry{9308046}.
+	\item \bibentry{darkroom}.
+	\item \bibentry{isckress20}.
+	\item \bibentry{jupyter} (\textbf{Best Paper}).
 	\item \bibentry{testbib}.
 	\item \bibentry{Kress:ISC19}.
 	\item \bibentry{Labasan:IPDPS19}.
@@ -140,6 +157,16 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 	\item Ascent is a flyweight library for in situ visualization and analysis, with emphases on minimal
 	memory usage and API, as well as interoperability with external libraries.
 	\item Larsen's contributions include design on the main runtime, which translates the front-facing user API into a data flow network, the expressions language, and in situ triggers infrastructure. Ascent has been integrated into numerous simulation codes, and Ascent has been demonstrated running using over 16K GPUs on LLNL's Sierra supercomuter.
+\end{itemize}
+
+{\em \textbf{Devil Ray(software architect and developer since inception in 2017}) }
+\begin{itemize}
+	\item Devil Ray is visualization and analysis libary for high-order finite elements targeting modern HPC
+  architectures. Originally, Devil Ray was developed as high-order element ray tracer, but Devil Ray has grown to include general analysis and visualization capabilites responding to the needs of our customers.
+	\item As a staff scientist interacting with LLNL's simulation codes, Larsen identified gaps in our
+  current visualization and analysis capabilities. Larsen secured internal funding to develop Devil Ray
+  and implemented the library along with Masado Ishii, a student funded by LLNL. To date, we have demonstrated
+  Devil Ray running concurrenlty on over 4,000 GPUs is support of LLNL's mission.
 \end{itemize}
 
 {\em \textbf{Stawman In Situ Visualization Mini-app (primary developer 2016-2017)} }
@@ -189,7 +216,11 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 
 \section{\sc Peer Reviewed conference tutorials}
 \begin{list2}
-	\item ``In Situ Analysis and Visualization with SENSEI and Ascent'' at ACM/IEEE SuperComputing 2019, Denver, CO, November, 2019 (to appear).
+  \item ``In Situ Scientific Analysis and Visualization using ALPINE Ascent'' at an ECP Training Event - Dec 2020, Virtual
+	\item ``In Situ Analysis and Visualization with SENSEI and Ascent'' at ACM/IEEE SuperComputing 2020, Atlanta, GA, November, 2020.
+	\item ``In Situ Visualization and Analysis with Ascent'' at Exascale Computing Project (ECP) Annual
+	Meeting, Houston, TX, February 2020.
+	\item ``In Situ Analysis and Visualization with SENSEI and Ascent'' at ACM/IEEE SuperComputing 2019, Denver, CO, November, 2019.
 	\item ``In Situ Visualization and Analysis with Ascent'' at Exascale Computing Project (ECP) Annual
 	Meeting, Houston, TX, January 2019.
 \end{list2}
@@ -200,6 +231,7 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 \end{list2}
 \section{\sc Invited Talks}
 \begin{list2}
+	\item Oak Ridge National Laboratory, ``Devil Ray: A Portably Performant Ray Tracer for High-Order Element Visualization'' Oak Ridge, TN, October 2019.
 	\item University of Oregon, ``In Situ Visualization for Exascale Computing,'' Eugene, OR, November 2018.
 	\item Rheinisch-Westfaelische Technische Hochschule (RWTH)-Aachen, ``The changing balance in HPC and in situ visualization challenges,'' Aachen, Germany, July 2018.
 	\item Los Alamos National Laboratory, “Performance Modeling of In Situ Rendering,” Los Alamos, NM, September 2016.
@@ -216,6 +248,11 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 \begin{list2}
 	\item Organization
 		\begin{list2}
+			\item Program Co-Chair: EGPGV co-located with EuroVis, Zurich, Switzerland, 14 June 2021
+      \item Khronos ANARI adivory panel 2021
+			\item Co-organizer: Visualization in Practice, IEEE Vis associated event, New Orleans, LA, USA
+ October 2021
+			\item Co-organizer: Visualization in Practice, IEEE Vis associated event, Salt Lake City, USA, October 2020
 			\item Co-organizer: Visualization in Practice, IEEE Vis associated event, Vancouver, Canada, October 2019
 			\item Site chair: DOE Computer Graphics Forum, Monterey, CA, April 2019
 			\item Site chair: VTK-m hackathon, Livermore, CA, August 2018
@@ -223,20 +260,21 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 	\item Program Committee
 		\begin{list2}
 			\item ACM/IEEE Supercomputing (SC) tutorials 2017, 2018, 2019
-			\item Eurographics Parallel Graphics and Visualization Symposium 2018, 2019
-			\item In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV) 2017, 2018, 2019
+			\item Eurographics Parallel Graphics and Visualization Symposium 2018, 2019, 2020
+			\item In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization (ISAV) 2017, 2018, 2019, 2020
 		    \item Visualization in Practice 2017
 		\end{list2}
 	\item Technical Paper Reviews
 	\begin{list2}
+		\item IEEE Transactions on Visualization and Computer Graphics(TVCG) 2020
 		\item Journal of Computational Science 2018
 		\item Journal of Computer Graphics and Applications 2017
-		\item EuroVis 2017
+		\item EuroVis 2017 2021
 		\item Pacific Vis 2017
 		\item SIAM Journal on Scientific Computing 2016
-		\item EuroGraphics Parallel Graphics and Visualization Symposium 2015, 2018, 2019
-		\item IEEE Visualization Conference 2015, 2019
-		\item In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization  2015, 2017, 2018
+		\item EuroGraphics Parallel Graphics and Visualization Symposium 2015, 2018, 2019, 2020
+		\item IEEE Visualization Conference 2015, 2019, 2021
+		\item In Situ Infrastructures for Enabling Extreme-scale Analysis and Visualization  2015, 2017, 2018, 2019, 20202
 	\end{list2}
 	\item Grant Reviews
 	\begin{list2}
@@ -244,7 +282,7 @@ Scientific visualization, in-situ analysis infrastructures, high performance com
 	\end{list2}
 	\item Other Service
 	\begin{list2}
-		\item ACM/IEEE SuperComputing Visualization Showcase 2018 (Judge)
+		\item ACM/IEEE SuperComputing Visualization Showcase 2018, 2019 (Judge)
 	\end{list2}
 \end{list2}
 
